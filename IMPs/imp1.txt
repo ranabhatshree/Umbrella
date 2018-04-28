@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="css/mdb.min.css">
+</head>
+<body>
+
+<h2>testing</h2>
+<form class="form">
+	<input type="text" name="name" id="name" placeholder="Name">
+	<input type="email" name="email" id="email" placeholder="email">
+	<input type="number" name="phone" id="phone" placeholder="phone">
+	<button type="submit" id="send_btn">Send</button>
+</form>
+<p id="status"></p>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$(".form").submit(function(event)
+		{
+			event.preventDefault();
+			
+			//using ajax to post the data
+			$.ajax({
+				url:"shree.php",
+				type:"POST",
+				data:{
+					name:$("#name").val(),
+					email:$("#email").val(),
+					phone:$("#phone").val()
+				},
+				beforeSend:function()
+				{
+					$("#send_btn").html("Sending....");
+				},
+				success:function(resp)
+				{
+					$("#status").html(resp);
+				},
+				error:function(err)
+				{
+					$("#status").html(err);
+				},
+				complete:function()
+				{
+					$("#send_btn").html('Send');
+				}
+			});
+		});
+	});
+</script>
+</body>
+</html>
+<div class="md-form">
+    <i class="fa fa-envelope prefix"></i>
+    <input type="email" id="form9" class="form-control validate">
+    <label for="form9" data-error="wrong" data-success="right">Type your email</label>
+</div>
+
+<div class="md-form">
+    <i class="fa fa-lock prefix"></i>
+    <input type="password" id="form10" class="form-control validate">
+    <label for="form10" data-error="wrong" data-success="right">Type your password</label>
+</div>

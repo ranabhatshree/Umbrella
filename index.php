@@ -1,0 +1,1 @@
+<?php include('inc/header.php'); ?><?php include('inc/navigation.php'); ?><main><?php include('inc/about.php'); ?><?php include('inc/projects.php'); ?><?php include('inc/customer.php'); ?><?php include('inc/contact.php'); ?><?php include('inc/gotoTop.php'); ?></main><?php include('inc/footer.php'); ?>

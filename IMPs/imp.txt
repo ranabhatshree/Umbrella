@@ -1,0 +1,14 @@
+<div class="md-form">
+                                    <p class="lead grey-text font-bold">Time to be completed in:</p>
+                                <select class="mdb-select colorful-select dropdown-info">
+                                    <option value="3 days">3 days</option>
+                                    <option value="5 days">5 days</option>
+                                    <option value="1 Week">1 Week</option>
+                                    <option value="2 Weeks">2 Weeks</option>
+                                    <option value="3 Weeks">3 Weeks</option>
+                                    <option value="1 Month">1 Month</option>
+                                    <option value="2 Months">2 Months</option>
+                                    <option value="3 Months">3 Months</option>
+                                </select>
+                                <p class="grey-text">Note: If time is more than 3 Months, then please mention in the description below.</p>
+                                </div><!--close md form -->
